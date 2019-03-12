@@ -16,7 +16,7 @@ names = json.loads(open('names.json').read())
 
 
 for name in names:
-	time.sleep(5)    #Delay the frequency of requests to prevent crashing
+	time.sleep(4)    #Delay the frequency of requests to prevent crashing
 	num = ''.join(random.choice(string.digits)) + str(random.randrange(0,999)) 
 	name_extra = ''.join(random.choice(names))	   	
 	email = name.lower() + name_extra + num + email_domain[random.randrange(0,4)]  #revised to descrease liklihood of collision of real email
